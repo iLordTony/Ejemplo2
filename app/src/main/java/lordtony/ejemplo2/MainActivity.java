@@ -1,22 +1,20 @@
 package lordtony.ejemplo2;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import lordtony.ejemplo2.fragments.SendDataDialogFragment;
 
 //Talvez deba poner FrgmentActivity
 public class MainActivity extends ActionBarActivity implements SendDataDialogFragment.DialogListener {
@@ -105,48 +103,5 @@ public class MainActivity extends ActionBarActivity implements SendDataDialogFra
 
         Log.e("TAG90:", "Negativo");
         Toast.makeText(getApplicationContext(), "Click " + getResources().getString(R.string.msg_no), Toast.LENGTH_SHORT).show();
-    }
-}
-
-class SendDataDialogFragment extends DialogFragment{
-    public interface DialogListener{
-        public void onDialogPositiveClick(DialogFragment dialog);
-        public void onDialogNegativeClick(DialogFragment dialog);
-    }
-    DialogListener listener;
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-
-        try{
-            listener = (DialogListener)activity;
-        }catch (ClassCastException e){
-
-        }
-    }
-
-    @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-
-        builder.setTitle("Mi titulo")
-                .setSingleChoiceItems(R.array.dialog_options, 0, null)
-                .setPositiveButton(R.string.msg_yes, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        listener.onDialogPositiveClick(SendDataDialogFragment.this);
-                    }
-                }).setNegativeButton(R.string.msg_no, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        listener.onDialogNegativeClick(SendDataDialogFragment.this);
-                    }
-                });
-
-
-        return builder.create();
     }
 }

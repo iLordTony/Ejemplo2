@@ -26,4 +26,14 @@
         <item>Opcion A</item>
         <item>Opcion B</item>
     </string-array>
+    <string-array name="array_albums_weezer">
+        <item>The Blue Album</item>
+        <item>Pinkerton</item>
+        <item>The Green Album</item>
+    </string-array>
+    <string-array name="array_albums_blur">
+        <item>Leisure</item>
+        <item>Parklife</item>
+        <item>Blur</item>
+    </string-array>
 </resources>
