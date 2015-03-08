@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Ejemplo 2</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Compartir</string>
+    <string name="action_fav">Favorito</string>
+    <string name="Album">Album</string>
+    <string name="msg_share">Te comparto este album que me gusto =)</string>
+    <string name="msg_rate">Califica</string>
+    <string name="msg_yes">¡Si!</string>
+    <string name="msg_no">¡No!</string>
+    <string name="msg_recommendation">¡Recomiendame!</string>
+    <string name="title_barra">¿Qué tanto mola este album?</string>
+    <string name="msg_barra_0">No mola</string>
+    <string name="msg_barra_100">Mola</string>
+    <string name="action_dialog">Dialogo</string>
+    <string-array name="array_rate">
+        <item>Epico</item>
+        <item>Bueno</item>
+        <item>Regular</item>
+        <item>Malo</item>
+        <item>Caquita</item>
+    </string-array>
+    <string-array name="dialog_options">
+        <item>Opcion A</item>
+        <item>Opcion B</item>
+    </string-array>
+</resources>
