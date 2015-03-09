@@ -4,9 +4,9 @@ package lordtony.ejemplo2.models;
  * Created by USER on 07/03/2015.
  */
 public class Album {
-    public final static String WEEZER_ALBUM = "De Weezer";
-    public final static String BLUR_ALBUM = "De Blur";
-    private String album_type;
+    public final static String WEEZER_ALBUM = "Weezer";
+    public final static String BLUR_ALBUM = "Blur";
+    private String album_type = "Weezer";
     private String album_title;
 
     public Album(String album_title, String album_type){

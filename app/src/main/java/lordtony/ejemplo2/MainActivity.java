@@ -11,21 +11,43 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import lordtony.ejemplo2.fragments.SendDataDialogFragment;
+import lordtony.ejemplo2.models.Album;
 
 //Talvez deba poner FrgmentActivity
 public class MainActivity extends ActionBarActivity implements SendDataDialogFragment.DialogListener {
+    private static final String ALBUM_TYPE = "Tipo de Album";
+    private static final String ALBUM_TITLE = "Nombre del Album";
+
     private boolean favorite = false;
+    private Album album;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        album = new Album(intent.getStringExtra(ALBUM_TITLE),
+                intent.getStringExtra(ALBUM_TYPE));
+        Log.e("Tag90:", "Hola");
         ToggleButton toggle_recommendation = (ToggleButton)findViewById(R.id.toggle_button);
         toggle_recommendation.setChecked(true);
+
+        int resource = -1;
+        if (album.getAlbumType().equals(album.WEEZER_ALBUM)) {
+            resource = R.drawable.album1;
+        } else {
+            resource = R.drawable.album2;
+        }
+        Log.e("Tag90:", String.valueOf(resource));
+        ImageView img_header = (ImageView)findViewById(R.id.img_header);
+        img_header.setImageResource(resource);
+        setTitle(album.getAlbumTitle());
     }
 
     @Override

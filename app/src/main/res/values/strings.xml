@@ -27,13 +27,24 @@
         <item>Opcion B</item>
     </string-array>
     <string-array name="array_albums_weezer">
-        <item>The Blue Album</item>
-        <item>Pinkerton</item>
-        <item>The Green Album</item>
+        <item>Don\'t Let Go</item>
+        <item>Photograph</item>
+        <item>Hash Pipe</item>
+        <item>Island in the Sun</item>
+        <item>Crab</item>
+        <item>Knock-down Drag-out</item>
+        <item>Smile</item>
     </string-array>
     <string-array name="array_albums_blur">
-        <item>Leisure</item>
-        <item>Parklife</item>
-        <item>Blur</item>
+        <item>She\'s So High</item>
+        <item>Bang</item>
+        <item>Slow Down</item>
+        <item>Repetition</item>
+        <item>Bad Day</item>
+        <item>Sing</item>
+        <item>There\'s No Other Way</item>
+
     </string-array>
+    <string name="title_activity_album_list">Album List Activity</string>
+    <string name="title_activity_prueba">Prueba</string>
 </resources>
