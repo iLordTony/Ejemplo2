@@ -19,9 +19,9 @@ import lordtony.ejemplo2.data.CustomAdapter;
 import lordtony.ejemplo2.models.Album;
 
 
-public class AlbumListFragment extends ListFragment implements SwipeRefreshLayout.OnRefreshListener{
+public class AlbumListFragment extends ListFragment{
 
-    private SwipeRefreshLayout swipeLayout;
+    //private SwipeRefreshLayout swipeLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,8 +32,8 @@ public class AlbumListFragment extends ListFragment implements SwipeRefreshLayou
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        swipeLayout = (SwipeRefreshLayout) getView().findViewById(R.id.swipe_container_list);
-        initSwipeOptions();
+        /*swipeLayout = (SwipeRefreshLayout) getView().findViewById(R.id.swipe_container_list);
+        initSwipeOptions();*/
 
         ListView list = getListView();
         ArrayList<Album> albums = new ArrayList<Album>();
@@ -66,7 +66,7 @@ public class AlbumListFragment extends ListFragment implements SwipeRefreshLayou
 
     }
 
-    private void initSwipeOptions() {
+    /*private void initSwipeOptions() {
         swipeLayout.setOnRefreshListener(this);
         setAppearance();
     }
@@ -86,5 +86,5 @@ public class AlbumListFragment extends ListFragment implements SwipeRefreshLayou
                 swipeLayout.setRefreshing(false);
             }
         }, 4000);
-    }
+    }*/
 }
