@@ -35,7 +35,7 @@ public class AlbumListActivity extends ListActivity implements SwipeRefreshLayou
             albums.add(one_album);
         }
 
-        CustomAdapter adapter = new CustomAdapter(this, albums);
+        CustomAdapter adapter = new CustomAdapter(this, albums, true);
         setListAdapter(adapter);
     }
 

@@ -1,6 +1,7 @@
 package lordtony.ejemplo2.data;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -18,10 +19,11 @@ import lordtony.ejemplo2.R;
 public class CustomAdapter extends ArrayAdapter<Album>{
     ArrayList<Album> data;
     LayoutInflater inflater;
-
-    public CustomAdapter(Context context, ArrayList<Album> objects){
+    boolean is_list;
+    public CustomAdapter(Context context, ArrayList<Album> objects, boolean is_list){
         super(context, -1, objects);
         this.data = objects;
+        this.is_list = is_list;
         this.inflater = LayoutInflater.from(context);
     }
 
@@ -44,8 +46,10 @@ public class CustomAdapter extends ArrayAdapter<Album>{
             img_resource = R.drawable.album2;
         }
 
+        int myLayout = is_list ? R.layout.list_row : R.layout.grid_element;
+        //Log.e("Tag90:", String.valueOf(myLayout));
         if(convertView == null){
-            convertView = inflater.inflate(R.layout.list_row, null);
+            convertView = inflater.inflate(myLayout, null);
             holder = new ViewHolder();
 
             holder.img= (ImageView) convertView.findViewById(R.id.img_row);
