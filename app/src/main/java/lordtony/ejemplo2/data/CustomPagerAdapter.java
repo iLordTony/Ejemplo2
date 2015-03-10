@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.Log;
 
+import lordtony.ejemplo2.fragments.AlbumGridFragment;
 import lordtony.ejemplo2.fragments.AlbumListFragment;
 
 /**
@@ -17,7 +18,8 @@ public class CustomPagerAdapter extends FragmentStatePagerAdapter{
     public CustomPagerAdapter(FragmentManager fm) {
         super(fm);
         fragments = new Fragment[]{
-                new AlbumListFragment()
+                new AlbumListFragment(),
+                new AlbumGridFragment()
         };
         Log.e("Tag90:", "CustomPagerAdapter");
     }

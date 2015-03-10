@@ -31,6 +31,7 @@ public class AlbumListFragment extends ListFragment implements SwipeRefreshLayou
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
         swipeLayout = (SwipeRefreshLayout) getView().findViewById(R.id.swipe_container_list);
         initSwipeOptions();
 
@@ -49,6 +50,7 @@ public class AlbumListFragment extends ListFragment implements SwipeRefreshLayou
         CustomAdapter adapter = new CustomAdapter(getActivity(), albums, true);
 
         setListAdapter(adapter);
+
         Log.e("Tag90", "AlbumListFragment");
     }
 
