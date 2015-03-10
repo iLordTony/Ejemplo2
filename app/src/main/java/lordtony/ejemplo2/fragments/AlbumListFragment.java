@@ -1,26 +1,37 @@
-package lordtony.ejemplo2;
+package lordtony.ejemplo2.fragments;
 
-import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ListFragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import lordtony.ejemplo2.AlbumDetailActivity;
+import lordtony.ejemplo2.R;
 import lordtony.ejemplo2.data.CustomAdapter;
 import lordtony.ejemplo2.models.Album;
 
 
-public class AlbumListActivity extends ListActivity implements SwipeRefreshLayout.OnRefreshListener {
+public class AlbumListFragment extends ListFragment implements SwipeRefreshLayout.OnRefreshListener{
 
     private SwipeRefreshLayout swipeLayout;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_album_list);
 
-        swipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_album_list, null);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        swipeLayout = (SwipeRefreshLayout) getView().findViewById(R.id.swipe_container_list);
         initSwipeOptions();
 
         ListView list = getListView();
@@ -35,8 +46,22 @@ public class AlbumListActivity extends ListActivity implements SwipeRefreshLayou
             albums.add(one_album);
         }
 
-        CustomAdapter adapter = new CustomAdapter(this, albums, true);
+        CustomAdapter adapter = new CustomAdapter(getActivity(), albums, true);
+
         setListAdapter(adapter);
+        Log.e("Tag90", "AlbumListFragment");
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        Album clicked_album = (Album)l.getItemAtPosition(position);
+
+        Intent intent = new Intent(getActivity(), AlbumDetailActivity.class);
+        intent.putExtra(AlbumDetailActivity.ALBUM_TYPE, clicked_album.getAlbumType());
+        intent.putExtra(AlbumDetailActivity.ALBUM_TITLE, clicked_album.getAlbumTitle());
+
+        startActivity(intent);
+
     }
 
     private void initSwipeOptions() {

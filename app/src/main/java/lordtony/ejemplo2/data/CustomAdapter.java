@@ -47,7 +47,7 @@ public class CustomAdapter extends ArrayAdapter<Album>{
         }
 
         int myLayout = is_list ? R.layout.list_row : R.layout.grid_element;
-        //Log.e("Tag90:", String.valueOf(myLayout));
+        Log.e("Tag90:", String.valueOf(myLayout));
         if(convertView == null){
             convertView = inflater.inflate(myLayout, null);
             holder = new ViewHolder();

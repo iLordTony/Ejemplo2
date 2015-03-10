@@ -19,9 +19,9 @@ public class AlbumGridActivity extends ActionBarActivity implements SwipeRefresh
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_album_grid);
+        setContentView(R.layout.fragment_album_grid);
 
-        swipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+        swipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container_grid);
         initSwipeOptions();
 
         grid = (GridView)findViewById(R.id.grid_albums);
