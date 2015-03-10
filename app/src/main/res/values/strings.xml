@@ -43,8 +43,5 @@
         <item>Bad Day</item>
         <item>Sing</item>
         <item>There\'s No Other Way</item>
-
     </string-array>
-    <string name="title_activity_album_list">Album List Activity</string>
-    <string name="title_activity_prueba">Prueba</string>
 </resources>
