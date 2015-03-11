@@ -43,4 +43,10 @@
         <item>Sing</item>
         <item>There\'s No Other Way</item>
     </string-array>
+    <string-array name="array_drawer_options">
+        <item>Albums</item>
+        <item>Terminos</item>
+    </string-array>
+    <string name="drawer_open">Abrir</string>
+    <string name="drawer_close">Cerrar</string>
 </resources>

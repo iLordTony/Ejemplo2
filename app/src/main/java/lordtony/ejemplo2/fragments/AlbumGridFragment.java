@@ -21,9 +21,9 @@ import lordtony.ejemplo2.data.CustomAdapter;
 import lordtony.ejemplo2.models.Album;
 
 
-public class AlbumGridFragment extends Fragment implements OnItemClickListener {
+public class AlbumGridFragment extends Fragment implements OnItemClickListener, SwipeRefreshLayout.OnRefreshListener {
 
-   // private SwipeRefreshLayout swipeLayout;
+    private SwipeRefreshLayout swipeLayout;
     private GridView grid;
 
     @Override
@@ -32,8 +32,8 @@ public class AlbumGridFragment extends Fragment implements OnItemClickListener {
         View view = inflater.inflate(R.layout.fragment_album_grid, null);
         grid = (GridView) view.findViewById(R.id.grid_albums);
 
-        //swipeLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipe_container_grid);
-       // initSwipeOptions();
+        swipeLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipe_container_grid);
+        initSwipeOptions();
 
         return view;
     }
@@ -61,7 +61,7 @@ public class AlbumGridFragment extends Fragment implements OnItemClickListener {
         Log.e("Tag90", "AlbumGridFragment");
     }
 
-    /*private void initSwipeOptions() {
+    private void initSwipeOptions() {
         swipeLayout.setOnRefreshListener(this);
         setAppearance();
     }
@@ -81,7 +81,7 @@ public class AlbumGridFragment extends Fragment implements OnItemClickListener {
                 swipeLayout.setRefreshing(false);
             }
         }, 4000);
-    }*/
+    }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
