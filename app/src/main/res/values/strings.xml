@@ -45,7 +45,7 @@
     </string-array>
     <string-array name="array_drawer_options">
         <item>Albums</item>
-        <item>Terminos</item>
+        <item>Terminos y condiciones</item>
     </string-array>
     <string name="drawer_open">Abrir</string>
     <string name="drawer_close">Cerrar</string>

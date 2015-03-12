@@ -1,0 +1,30 @@
+[{
+	type:1,
+	location:[19.504574, -99.146674],
+	title:"ESCOM",
+	description:"El agujero de los nerds"
+},
+{
+	type:0,
+	location:[19.499524, -99.145289],
+	title:"ENCB",
+	description:"Que hueva biologia"
+},
+{
+	type:0,
+	location:[19.505714, -99.144163],
+	title:"Una plaza",
+	description:"Plaza Torres Lindavista"
+},
+{
+	type:2,
+	location:[19.504713, -99.139453],
+	title:"ESIQUE",
+	description:"Una escuela mas del politecnico"
+},
+{
+	type:2,
+	location:[19.507190, -99.139346],
+	title:"Direccion general",
+	description:"Direccion general del politecnico, aqui vive el director"
+}]

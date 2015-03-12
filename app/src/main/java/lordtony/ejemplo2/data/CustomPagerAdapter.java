@@ -7,6 +7,7 @@ import android.util.Log;
 
 import lordtony.ejemplo2.fragments.AlbumGridFragment;
 import lordtony.ejemplo2.fragments.AlbumListFragment;
+import lordtony.ejemplo2.fragments.PlacesMapFragment;
 
 /**
  * Created by USER on 09/03/2015.
@@ -19,7 +20,8 @@ public class CustomPagerAdapter extends FragmentStatePagerAdapter{
         super(fm);
         fragments = new Fragment[]{
                 new AlbumListFragment(),
-                new AlbumGridFragment()
+                new AlbumGridFragment(),
+                new PlacesMapFragment()
         };
         Log.e("Tag90:", "CustomPagerAdapter");
     }

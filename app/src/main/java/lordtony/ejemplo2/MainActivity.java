@@ -36,8 +36,8 @@ public class MainActivity extends ActionBarActivity  implements ListView.OnItemC
         if (bar != null) {
             bar.setDisplayHomeAsUpEnabled(true);
             bar.setHomeButtonEnabled(true);
-            bar.setDisplayShowTitleEnabled(false);
-            Log.e("Tag90", "Entro al if");
+            bar.setDisplayShowTitleEnabled(true);
+            Log.e("Tag90", "Entro al if, en mainActivity");
         }
 
 
