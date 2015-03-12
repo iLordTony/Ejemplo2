@@ -47,6 +47,11 @@
         <item>Albums</item>
         <item>Terminos y condiciones</item>
     </string-array>
+    <string-array name="name_tabs">
+        <item>Lista</item>
+        <item>Grid</item>
+        <item>Mapa</item>
+    </string-array>
     <string name="drawer_open">Abrir</string>
     <string name="drawer_close">Cerrar</string>
 </resources>

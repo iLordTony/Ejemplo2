@@ -19,6 +19,7 @@ public class TermsFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
         web_view.loadUrl("http://www.google.com");
         web_view.setWebViewClient(new WebViewClient(){
             @Override

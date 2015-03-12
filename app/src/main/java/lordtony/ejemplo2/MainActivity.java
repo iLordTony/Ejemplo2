@@ -15,6 +15,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.support.v7.app.ActionBar;
 
+import java.util.ArrayList;
+
 import lordtony.ejemplo2.fragments.MainFragment;
 import lordtony.ejemplo2.fragments.TermsFragment;
 
